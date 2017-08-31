@@ -28,14 +28,12 @@
       /* Récupère le formulaire au moment du chargement de la percentage
       Dans le cas ou ont ne reçois rien ont continue le chargement. */
       if( isset($_POST['Register'])){
-          if(isset($_POST['V_Lastname'],$_POST['V_Name'],$_POST['V_Email'],$_POST['V_1pwd'],$_POST['V_2pwd'])){
+          if(isset($_POST['V_Pseudo'],$_POST['V_Name'],$_POST['V_Email'],$_POST['V_1pwd'],$_POST['V_2pwd'])){
               extract($_POST);
-              echo $V_Lastname." ".$V_Name." ".$V_Email." ".$V_1pwd;
-
+              echo $V_Pseudo." ".$V_Name." ".$V_Email." ".$V_1pwd;
           }
+        }
 
-      }
-      
 
     ?>
 
@@ -48,9 +46,9 @@
       <section class="login-form">
         <form method="post" role="login">
           <img src="content/themes/default/login_logo.png" class="img-responsive" alt="logo login" />
-          <input type="Lastname" name="V_Lastname" class="form-control input-lg" id="nom" placeholder="Jobs" required="" />
-          <input type="Firstname" name="V_Name" class="form-control input-lg" id="prenom" placeholder="Steve" />
-          <input type="email" name="V_Email" placeholder="Email" required class="form-control input-lg" placeholder="mon@mail.com" />
+          <input type="pseudo" name="V_Pseudo" class="form-control input-lg" id="nom" placeholder="Pseudo" required="" />
+          <input type="Firstname" name="V_Name" class="form-control input-lg" id="nom" placeholder="Nom et Prenom" />
+          <input type="email" name="V_Email" placeholder="Email" required class="form-control input-lg" placeholder="Adresse Email" />
           <input type="password" name="V_1pwd" class="form-control input-lg" id="password_initial" placeholder="Password" required="" />
           <input type="password" name="V_2pwd" class="form-control input-lg" id="password_verif" placeholder="Password" required="" />
           <div class="pwstrength_viewport_progress"></div>

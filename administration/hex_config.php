@@ -3,7 +3,7 @@
 
 
 $DBHOST = 'localhost'; //Host pour la base de donnée (BDD)
-$DBNAME = 'hexag'; //Nom de la BDD
+$DBNAME = 'haxag'; //Nom de la BDD
 $DBUSER = 'root'; //Login BDD
 $DBPASS = 'root'; //Mot de passe de la BDD
 
