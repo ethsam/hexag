@@ -1,42 +1,13 @@
 <!DOCTYPE html>
 
 <?php
-    require 'fonctions.php'; //Fichier contenant les fonctions
-    require 'hex_config.php'; //fichier contenant les informations de connections à la BDD
+    require './fonctions.php'; //Fichier contenant les fonctions
+    require './hex_config.php'; //fichier contenant les informations de connections à la BDD
   ?>
 
+  <?php require 'header_register.php'; //header de la page register ?>
 
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="content/themes/default/login.css">
-
-    <!--[if lt IE 9]
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    [endif]-->
-
-  </head>
-  <body>
-    <?php
-      /* Récupère le formulaire au moment du chargement de la percentage
-      Dans le cas ou ont ne reçois rien ont continue le chargement. */
-      if( isset($_POST['Register'])){
-          if(isset($_POST['V_Pseudo'],$_POST['V_Name'],$_POST['V_Email'],$_POST['V_1pwd'],$_POST['V_2pwd'])){
-              extract($_POST);
-              echo $V_Pseudo." ".$V_Name." ".$V_Email." ".$V_1pwd;
-              $connexion
-          }
-        }
-
-
-    ?>
+    <?php require 'insert_users.php'; //insertion du formulaire register dans la BDD ?>
 
     <div class="container">
 
